@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { MockProductService } from './mock-product.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,10 @@ import { MockProductService } from './mock-product.service';
 export class ProductService {
 
   constructor() { }
-  
-  mockProduct:MockProductService = inject(MockProductService)
+
+  mockProducts:MockProductService = inject(MockProductService)
+
+  getProducts(){
+    console.log(this.mockProducts.generateMockProduct())
+  }
 }

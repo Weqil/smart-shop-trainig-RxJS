@@ -8,6 +8,6 @@ export class RandomService {
   constructor() { }
 
   generateRandomForMinMax(min:number,max:number){
-   return Math.random() * (max - min) + min
+   return Math.round(Math.random() * (max - min) + min) 
   }
 }
