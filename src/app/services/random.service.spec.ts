@@ -13,4 +13,10 @@ describe('RandomService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('random number >= min and number <= max',()=>{
+    let min = 0
+    let max = 100
+    expect(service.generateRandomForMinMax(min,max)).toBeGreaterThanOrEqual(min)
+    expect(service.generateRandomForMinMax(min,max)).toBeLessThanOrEqual(max)
+  })
 });
